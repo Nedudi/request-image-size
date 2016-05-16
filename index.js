@@ -62,6 +62,8 @@ module.exports = function(options, done) {
 
   // Prevent maxRedirects exceptions from being thrown
   // Callback was already called in 'return done(imageTypeDetectionError)'
-  req.on('error', function(err) {});
+  req.on('error', function(err) {
+    done(err)
+  });
 
 };
